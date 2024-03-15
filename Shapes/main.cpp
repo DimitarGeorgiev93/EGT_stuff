@@ -12,8 +12,8 @@
 
 void drawingFigLoop();
 void freeVector(std::vector<Shape*>&);
-bool ValidateIntEntry( const int&);
-bool ValidateCharEntry( const char&);
+const bool ValidateIntEntry( const int);
+const bool ValidateCharEntry( const char);
 
 
 int main()
@@ -134,7 +134,7 @@ void freeVector(std::vector<Shape*>& arr)
     }
 }
 
-bool ValidateCharEntry(const char& character)
+const bool ValidateCharEntry(const char character)
 {
     if (character < 33 || character > 126)
     {
@@ -143,7 +143,7 @@ bool ValidateCharEntry(const char& character)
     return true;
 }
 
-bool ValidateIntEntry(const int& number)
+const bool ValidateIntEntry(const int number)
 {
     if (number % 1 != 0)
     {

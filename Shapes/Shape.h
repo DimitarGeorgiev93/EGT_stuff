@@ -12,6 +12,8 @@ public:
 	Shape(int, int, char);
 	int getX() const;
 	const char getDrawingChar();
+
+	virtual ~Shape();
 private:
 	int x;
 	char drawingChar;;

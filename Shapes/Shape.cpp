@@ -42,3 +42,7 @@ const char Shape::getDrawingChar()
 {
 	return this->drawingChar;
 }
+
+Shape::~Shape()
+{
+}

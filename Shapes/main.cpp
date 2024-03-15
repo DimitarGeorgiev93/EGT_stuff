@@ -12,6 +12,7 @@
 
 void drawingFigLoop();
 void freeVector(std::vector<Shape*>);
+bool ValidateEntry(int,int,int,int, char);
 
 
 int main()

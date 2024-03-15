@@ -37,8 +37,7 @@ void drawingFigLoop()
         std::cout << "Fourth number  - prints X above and on the left of the object " << std::endl;
         std::cout << "Char - what charcater the object will have as a drawingChar " << std::endl;
         std::cout << "to exit - type 5, will print all created objects so far " << std::endl;
-        //std::cin.clear();
-       // std::cin.ignore();
+
         std::cin >> command;
 
         if (!std::cin)
@@ -57,8 +56,6 @@ void drawingFigLoop()
             std::cin.ignore(10000, '\n');
             continue;
         }
-
-        //std::cin.ignore(10000, '\n');
 
         if (command == 5) 
         {
@@ -117,10 +114,6 @@ void drawingFigLoop()
             ptr = nullptr;
             std::cout << "added a Triangle" << std::endl;
             break;
-       /* case 5:
-            system("CLS");
-            freeVector(arr);
-            break;*/
         default:
             std::cout << "nothing added, figures are 1 to 4" << std::endl;
             break;
@@ -136,15 +129,13 @@ void freeVector(std::vector<Shape*>& arr)
     {
         std::cout << "drawing " << count++ << std::endl;
         var->draw();
-        Shape* tempPtr = var;
-        delete tempPtr;
-        tempPtr = nullptr;
+        delete var;
+        var = nullptr;
     }
 }
 
 bool ValidateCharEntry(const char& character)
 {
-    std::cout << "testing entry asdasd \n";
     if (character < 33 || character > 126)
     {
         return false;
@@ -154,7 +145,6 @@ bool ValidateCharEntry(const char& character)
 
 bool ValidateIntEntry(const int& number)
 {
-    std::cout << "testing entry asdasd \n";
     if (number % 1 != 0)
     {
         return false;

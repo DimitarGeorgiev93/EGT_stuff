@@ -1,3 +1,6 @@
 [submodule "EGT_FinalProject_ChessBoardGenerator"]
 	path = EGT_FinalProject_ChessBoardGenerator
 	url = https://github.com/DimitarGeorgiev93/EGT_FinalProject_ChessBoardGenerator
+[submodule "Inheritance_EGT"]
+	path = Inheritance_EGT
+	url = https://github.com/DimitarGeorgiev93/Inheritance_EGT
